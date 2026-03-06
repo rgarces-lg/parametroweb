@@ -1,0 +1,252 @@
+.product-def-section {
+    padding: var(--section-padding);
+    background-color: #222222;
+    /* Charcoal black from slide */
+    color: var(--color-white);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.pd-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+/* Left Side Styles */
+.pd-main-title {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+}
+
+.pd-p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #cccccc;
+    font-weight: 300;
+    max-width: 500px;
+}
+
+.pd-diff-section {
+    margin-top: 3rem;
+}
+
+.pd-diff-title {
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pd-diff-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.pd-diff-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pd-diff-icon {
+    font-size: 1.5rem;
+    color: var(--color-white);
+}
+
+.pd-diff-text {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Right Side: Visualization Styles */
+.pd-vis-col {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.pd-concentric-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pd-circle {
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.pd-outer {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
+
+.pd-middle {
+    width: 75%;
+    height: 75%;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.pd-inner {
+    width: 60%;
+    height: 60%;
+    border: 2px solid var(--color-white);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Label Positions */
+.pd-circle-label {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+}
+
+.pd-circle-label.top {
+    top: 10%;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--color-white);
+}
+
+.pd-outer>.pd-circle-label.top {
+    top: 5%;
+}
+
+.pd-middle>.pd-circle-label.top {
+    top: 12%;
+}
+
+.pd-inner>.pd-circle-label.top {
+    top: 20%;
+}
+
+.pd-circle-label.bottom {
+    bottom: 5%;
+    font-size: 0.7rem;
+    line-height: 1.3;
+}
+
+.pd-circle-label.bottom strong {
+    display: block;
+    margin-bottom: 2px;
+}
+
+.pd-inner-bullets {
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* Floating Icons */
+.pd-side-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: var(--color-white);
+    z-index: 5;
+    background: #222222;
+    /* Matches exactly the section bg */
+    padding: 2px;
+}
+
+.icon-left {
+    left: -15px;
+}
+
+.icon-right {
+    right: -15px;
+}
+
+/* Legend Vertical */
+.pd-legend-vertical {
+    position: absolute;
+    right: -20px;
+    /* Outside the concentric wrapper on the right */
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    white-space: nowrap;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-white);
+    opacity: 0.8;
+}
+
+@media (min-width: 1200px) {
+    .pd-legend-vertical {
+        right: -80px;
+    }
+}
+
+/* Branding footer */
+.pd-branding-footer {
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
+
+.mini-logo {
+    width: 15px;
+    height: 15px;
+    background-color: var(--color-primary);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* Desktop Overrides */
+@media (min-width: 1024px) {
+    .pd-grid-container {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 4rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .pd-concentric-wrapper {
+        max-width: 320px;
+    }
+
+    .pd-circle-label.top {
+        font-size: 0.7rem;
+    }
+
+    .pd-main-title {
+        font-size: 2rem;
+    }
+
+    .pd-legend-vertical {
+        right: -100px;
+    }
+}

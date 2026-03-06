@@ -1,0 +1,219 @@
+.methodology-section {
+    padding: var(--section-padding);
+    background-color: #222222;
+    /* Charcoal black matching slide */
+    color: var(--color-white);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.meth-header {
+    margin-bottom: 4rem;
+}
+
+.meth-title {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.meth-subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Icons Grid */
+.meth-top-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 6rem;
+}
+
+.meth-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.meth-icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    transition: transform var(--transition-normal);
+}
+
+.meth-card:hover .meth-icon-circle {
+    transform: scale(1.1);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.meth-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.meth-card-desc {
+    font-size: 0.85rem;
+    color: #bbb;
+    line-height: 1.5;
+    max-width: 250px;
+}
+
+/* Timeline Architecture */
+.meth-timeline-container {
+    position: relative;
+    width: 100%;
+    padding: 60px 0;
+    margin-top: 4rem;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.timeline-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-node {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.node-marker {
+    width: 1px;
+    height: 40px;
+    background-color: var(--color-white);
+    position: absolute;
+    top: -20px;
+}
+
+.node-letter {
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.8rem;
+    position: absolute;
+    top: -60px;
+}
+
+.node-label {
+    position: absolute;
+    top: 30px;
+    text-align: center;
+    width: 150px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.inter-node {
+    flex: 0.5;
+}
+
+.inter-node .node-marker {
+    height: 80px;
+    top: 0;
+}
+
+.inter-node .node-label {
+    top: 90px;
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+.highlight-orange {
+    color: var(--color-primary);
+}
+
+.timeline-end-label {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    background: #222;
+    padding-left: 10px;
+}
+
+/* Footer */
+.meth-footer {
+    margin-top: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    opacity: 0.6;
+}
+
+.mini-logo-triangle {
+    width: 15px;
+    height: 15px;
+    background-color: var(--color-primary);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* Desktop Adapts */
+@media (min-width: 1024px) {
+    .meth-top-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .meth-card {
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .meth-card-desc {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .meth-timeline-container {
+        display: none;
+        /* Hide complex timeline on mobile, maybe replace with list? */
+    }
+
+    .meth-top-grid {
+        margin-bottom: 2rem;
+    }
+}

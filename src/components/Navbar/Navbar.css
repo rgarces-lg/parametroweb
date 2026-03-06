@@ -1,0 +1,116 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    /* Tighter padding on mobile */
+    z-index: 1000;
+    transition: all var(--transition-normal);
+    background: transparent;
+}
+
+.navbar.nav-scrolled {
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 30px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-logo .logo-text {
+    color: var(--color-white);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Hidden on mobile by default */
+.nav-links {
+    display: none;
+    gap: 2.5rem;
+}
+
+.nav-link {
+    color: var(--color-white);
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.8;
+    transition: opacity var(--transition-fast), color var(--transition-fast);
+}
+
+.nav-link:hover {
+    opacity: 1;
+    color: var(--color-primary);
+}
+
+/* Hidden CTA on very small screens */
+.nav-cta {
+    display: none;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.btn-primary:hover {
+    background-color: #e04b1e;
+    transform: translateY(-2px);
+}
+
+/* Small devices (phablets upwards) */
+@media (min-width: 500px) {
+    .nav-cta {
+        display: block;
+    }
+}
+
+/* Tablet Up / Desktop */
+@media (min-width: 900px) {
+    .navbar {
+        padding: 1.5rem 0;
+    }
+
+    .nav-container {
+        padding: 0 2rem;
+    }
+
+    .nav-logo .logo-text {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        display: flex;
+    }
+
+    .btn-primary {
+        padding: 0.75rem 1.75rem;
+        font-size: 0.9rem;
+    }
+}

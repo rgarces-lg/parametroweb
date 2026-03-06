@@ -1,0 +1,275 @@
+{
+    "hero": {
+        "title": "ARQUITECTURA PARAMÉTRICA\nY FINANCIERA",
+        "brandName": "PARÁMETRO"
+    },
+    "valueProposition": {
+        "title": "Servicios y soluciones",
+        "question": "¿Cómo lo hacemos?",
+        "highlight": "Contamos con la metodología adecuada para diseñar y Validar el más Rentable Uso de Suelo de tu Proyecto en minutos"
+    },
+    "methodology": {
+        "title": "METODOLOGÍA",
+        "subtitle": "Planeación y estrategia financiera",
+        "topItems": [
+            {
+                "id": 1,
+                "title": "Validación",
+                "description": "Optimización de volumetrías por coeficientes y utilización de espacio considerando estrategia.",
+                "icon": "fa-solid fa-building-circle-check"
+            },
+            {
+                "id": 2,
+                "title": "Costeo",
+                "description": "Proyección de flujos con costos paramétricos o definidos por el profesional.",
+                "icon": "fa-solid fa-user-clock"
+            },
+            {
+                "id": 3,
+                "title": "Utilidad",
+                "description": "Potencial del negocio y rendimientos en función de indicadores como TIR, ROI, múltiplo y retornos de capital.",
+                "icon": "fa-solid fa-money-bill-transfer"
+            },
+            {
+                "id": 4,
+                "title": "Estrategia",
+                "description": "Definición de esquema de negocio, estructura de capital y fuentes de apalancamiento.",
+                "icon": "fa-solid fa-chess-knight"
+            }
+        ],
+        "timeline": [
+            {
+                "letter": "A",
+                "label": "Proforma Dinámica",
+                "subLabel": ""
+            },
+            {
+                "letter": "",
+                "label": "Definición (Concepto) Volumétrica",
+                "isInter": true
+            },
+            {
+                "letter": "B",
+                "label": "Modelo financiero",
+                "subLabel": ""
+            },
+            {
+                "letter": "C",
+                "label": "Indicadores financieros.",
+                "subLabel": ""
+            },
+            {
+                "letter": "D",
+                "label": "Modelo y estructura De Negocio",
+                "subLabel": ""
+            }
+        ]
+    },
+    "process": {
+        "etapas": [
+            {
+                "id": 1,
+                "name": "Investigación de Mercado",
+                "verticalText": "Productos y Mercado Meta Zona",
+                "description": "Análisis de Mercado local y segmentación.",
+                "icon": "fa-solid fa-magnifying-glass-chart"
+            },
+            {
+                "id": 2,
+                "name": "Conceptualización y Determinación",
+                "verticalText": "Idea Concepto Volumetrías Estrategia",
+                "description": "Innovación y definición técnica.",
+                "icon": "fa-solid fa-lightbulb",
+                "letter": "A",
+                "letterLabel": "Análisis y Modelo Financiero"
+            },
+            {
+                "id": 3,
+                "name": "Ventas Simuladas",
+                "verticalText": "Estructura Financiera",
+                "description": "Validación preventiva en mercado.",
+                "icon": "fa-solid fa-chart-line"
+            },
+            {
+                "id": 4,
+                "name": "Estrategia Ventas",
+                "verticalText": "Estrategia Lista de precios Cobranza",
+                "description": "Plan acelerado de comercialización.",
+                "icon": "fa-solid fa-bullseye",
+                "letter": "B",
+                "letterLabel": "Validación Financiera"
+            },
+            {
+                "id": 5,
+                "name": "Estrategia Cobranza",
+                "verticalText": "Implementación",
+                "description": "Gestión de pagos y flujo.",
+                "icon": "fa-solid fa-hand-holding-dollar",
+                "letter": "C",
+                "letterLabel": "Estrategia Desarrollo Construcción"
+            },
+            {
+                "id": 6,
+                "name": "Diseño Postproforma",
+                "verticalText": "Diseño Volumétrico",
+                "description": "Optimización volumétrica con data.",
+                "icon": "fa-solid fa-pencil-ruler",
+                "letter": "D",
+                "letterLabel": "Diseño"
+            }
+        ]
+    },
+    "productDefinition": {
+        "title": "DEFINICIÓN DE PRODUCTO",
+        "description": "No puede existir una Definición de Producto sin una lectura clara del mercado, PARÁMETRO resuelve adecuadamente las oportunidades que se detectan desde una visión de negocio.\n\nEl Software concibe y crea en su primera etapa una proforma volumétrica arquitectónica con todos los datos necesarios para evaluar y optimizar comercial y financieramente todo tipo de proyecto inmobiliario de desarrollo.",
+        "layers": {
+            "nuclear": [
+                "Distribuciones",
+                "Metrajes",
+                "Funcionalidad"
+            ],
+            "ampliado": [
+                "Amenidades",
+                "Áreas de Servicio",
+                "Estacionamiento"
+            ],
+            "metaProducto": [
+                "Intangibles",
+                "Plusvalía",
+                "Diseño"
+            ]
+        },
+        "diferenciador": [
+            {
+                "text": "Tendencia y Tribus",
+                "icon": "fa-solid fa-tent"
+            },
+            {
+                "text": "Producto a Diseñar",
+                "icon": "fa-solid fa-building-user"
+            },
+            {
+                "text": "Mercado Meta",
+                "icon": "fa-solid fa-arrow-trend-up"
+            },
+            {
+                "text": "Base para Arquitectos",
+                "icon": "fa-solid fa-pen-ruler"
+            }
+        ],
+        "adicionales": [
+            "Elementos de valoración cuantitativa"
+        ]
+    },
+    "services": {
+        "targetAudience": "Desarrolladores, Dueños de tierra, Arquitectos, Ingenieros",
+        "list": [
+            "Diseño inteligente bajo parámetros de negocio y/o comerciales y financieros.",
+            "Definición de producto en Proforma Dinámica.",
+            "Arquitectura y conceptualización paramétrica que optimiza tanto espacios como negocio.",
+            "Proyección ilimitada de diseños y proyectos.",
+            "Análisis financieros ilimitados de proyectos.",
+            "Estrategia comercial y financiera diseñada a medida.",
+            "Conceptualización y validación del mejor y más rentable uso de suelo para el proyecto."
+        ],
+        "projectTypes": [
+            "Vivienda Horizontal",
+            "Vivienda Vertical",
+            "Multifamiliar",
+            "Usos Mixtos",
+            "Hotel",
+            "Fashion Mall",
+            "Community Center",
+            "Power Center",
+            "Strip Mall",
+            "Life Style Center",
+            "Outlets",
+            "Town Center",
+            "Industrial",
+            "Centros Médicos",
+            "Centros de Negocios",
+            "CEDI"
+        ]
+    },
+    "financialAnalysis": {
+        "title": "Análisis Financiero",
+        "items": [
+            {
+                "id": "A",
+                "anchorId": "fin-a",
+                "title": "Proforma",
+                "subtitle": "FACTIBILIDAD",
+                "tag": "Se crea una proforma Dinámica",
+                "paragraphs": [
+                    "Esta proforma diseña el panorama potencial de negocio, definiendo volúmenes totales del proyecto.",
+                    "Analiza costos totales y optimiza la ocupación buscando la mayor área vendible según la reglamentación aplicable.",
+                    "Es el mapa para definir el concepto y una aproximación financiera para validar el negocio."
+                ]
+            },
+            {
+                "id": "B",
+                "anchorId": "fin-b",
+                "title": "Modelo Financiero",
+                "subtitle": "PROYECCIÓN DE FLUJOS",
+                "tag": "Cashflow Dinámico Flujos de proyecto en el tiempo",
+                "paragraphs": [
+                    "Con los datos dinámicos se modelan los flujos considerando ingresos y los costos paramétricos conforme al plan de obra.",
+                    "Sirve para visualizar el comportamiento financiero del proyecto basado en los tiempos definidos para venta y construcción."
+                ]
+            },
+            {
+                "id": "C",
+                "anchorId": "fin-c",
+                "title": "Indicadores",
+                "subtitle": "ESTRATEGIA",
+                "tag": "Cashflow Dinámico Potencial Financiero",
+                "paragraphs": [
+                    "Se modelan los escenarios financieros proyectados mostrando el panorama de flujos.",
+                    "Se calculan indicadores (TIR, ROI, Payback) que validan la rentabilidad y proyección de precios para poder hacer estrategia financiera y toma de decisiones."
+                ]
+            },
+            {
+                "id": "D",
+                "anchorId": "fin-d",
+                "title": "Modelo de Negocio",
+                "subtitle": "ESTRUCTURA",
+                "tag": "Cashflow Dinámico Definición y Estructura",
+                "paragraphs": [
+                    "Con base en la estructura de participaciones accionarias diseñada se muestra la participación de cada socio.",
+                    "Sensibiliza el panorama del uso y fuentes de capital, esquemas de participación y reparto de utilidades."
+                ]
+            }
+        ]
+    },
+    "dataPath": {
+        "title": "PROCESO",
+        "subtitle": "El Camino de Datos hacia proyectos rentables, únicos e innovadores en minutos",
+        "steps": [
+            {
+                "title": "Diseña el Producto Ideal",
+                "description": "El sistema determina el producto por estrategia o parámetros establecidos.",
+                "icon": "fa-solid fa-bullseye"
+            },
+            {
+                "title": "Conceptualiza tipologías por objetivos",
+                "description": "El mix de opciones se basa en segmentos y tendencias de consumo.",
+                "icon": "fa-solid fa-lightbulb"
+            },
+            {
+                "title": "Análisis de Competencia en la Zona",
+                "description": "Determina áreas de oportunidad para destacar proyectos.",
+                "icon": "fa-solid fa-chart-column"
+            },
+            {
+                "title": "Producto Nuclear a Meta Producto",
+                "description": "Diseño volumétrico que ofrece metrajes, tipologías y precios.",
+                "icon": "fa-solid fa-city"
+            },
+            {
+                "title": "Valor Agregado",
+                "description": "Métodos para definir aumentos de precios y plusvalías emocionales.",
+                "icon": "fa-solid fa-gem"
+            }
+        ]
+    }
+}

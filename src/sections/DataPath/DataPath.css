@@ -1,0 +1,171 @@
+.datapath-section {
+    padding: var(--section-padding);
+    background-color: var(--color-white);
+    color: var(--color-dark);
+}
+
+.dp-header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.dp-title {
+    color: var(--color-primary);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.dp-subtitle {
+    color: var(--color-primary);
+    font-size: 1rem;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.dp-steps-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.dp-step-row {
+    display: flex;
+    position: relative;
+    /* Add padding bottom to give space for the connecting line */
+    padding-bottom: 1.5rem;
+}
+
+/* Remove bottom padding on last item */
+.dp-step-row:last-child {
+    padding-bottom: 0;
+}
+
+.dp-icon-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1.5rem;
+    position: relative;
+    min-width: 50px;
+}
+
+.dp-icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-white);
+    z-index: 2;
+    position: relative;
+}
+
+.dp-icon-circle i {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+
+/* The vertical orange line connecting the steps */
+.dp-line {
+    position: absolute;
+    top: 50px;
+    /* Starts right below the circle */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background-color: rgba(242, 90, 41, 0.3);
+    /* Transparent primary color */
+    z-index: 1;
+}
+
+/* Ensure the connecting line covers the gap to the next item */
+.dp-step-row:not(:last-child) .dp-icon-col {
+    height: 100%;
+}
+
+.dp-content-col {
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-gray);
+    flex: 1;
+}
+
+.dp-step-row:last-child .dp-content-col {
+    border-bottom: none;
+}
+
+.dp-step-title {
+    font-size: 1rem;
+    color: var(--color-darker);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.dp-step-desc {
+    font-size: 0.9rem;
+    color: var(--color-dark);
+    font-weight: 300;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+/* Tablet Up */
+@media (min-width: 768px) {
+    .dp-header {
+        margin-bottom: 4rem;
+        text-align: left;
+    }
+
+    .dp-title {
+        font-size: 2.5rem;
+    }
+
+    .dp-subtitle {
+        font-size: 1.2rem;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .dp-step-row {
+        padding-bottom: 2rem;
+    }
+
+    .dp-icon-col {
+        margin-right: 2.5rem;
+        min-width: 60px;
+    }
+
+    .dp-icon-circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .dp-line {
+        top: 60px;
+    }
+
+    .dp-icon-circle i {
+        font-size: 1.8rem;
+    }
+
+    .dp-step-title {
+        font-size: 1.2rem;
+    }
+
+    .dp-step-desc {
+        font-size: 1rem;
+    }
+
+    .dp-content-col {
+        padding-top: 0.8rem;
+    }
+}

@@ -1,0 +1,126 @@
+.services-section {
+    padding: var(--section-padding);
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    position: relative;
+}
+
+.services-header {
+    margin-bottom: 3rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1.5rem;
+}
+
+.services-title {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-weight: 300;
+    color: var(--color-primary);
+    line-height: 1.2;
+}
+
+.services-title span {
+    color: var(--color-white);
+    font-weight: 700;
+    display: block;
+    /* Stack on mobile */
+    margin-bottom: 0.5rem;
+}
+
+.services-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.services-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--color-gray);
+    max-width: 900px;
+}
+
+.service-number {
+    font-weight: 700;
+    color: var(--color-white);
+    min-width: 25px;
+}
+
+.service-item p strong {
+    color: var(--color-white);
+    font-weight: 600;
+}
+
+.service-item p em {
+    font-style: italic;
+    color: var(--color-white);
+}
+
+.project-types-grid {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pt-title {
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.pt-columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.pt-item {
+    color: var(--color-text-dim);
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+/* Tablet Up */
+@media (min-width: 500px) {
+    .pt-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop Up */
+@media (min-width: 768px) {
+    .services-title span {
+        display: inline;
+        margin-bottom: 0;
+    }
+
+    .services-header {
+        margin-bottom: 4rem;
+        padding-bottom: 2rem;
+    }
+
+    .service-item {
+        font-size: 1.1rem;
+    }
+
+    .pt-columns {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .project-types-grid {
+        padding: 2rem;
+        margin-top: 2rem;
+    }
+}

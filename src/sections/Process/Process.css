@@ -1,0 +1,303 @@
+.process-section {
+    padding: var(--section-padding);
+    background-color: #f8f8f8;
+    overflow-x: hidden;
+}
+
+.process-subtitle {
+    color: var(--color-primary);
+    margin-bottom: 4rem;
+    font-weight: 500;
+}
+
+/* Horizontal Flow Container */
+.process-horizontal-container {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 120px;
+    /* Increased to fit circles and labels */
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+.process-horizontal-container::-webkit-scrollbar {
+    display: none;
+}
+
+.etapas-labels {
+    display: flex;
+    min-width: 1100px;
+    /* Slightly wider */
+    padding-right: 100px;
+    /* Space for the key icon area */
+    margin-bottom: 0.5rem;
+}
+
+/* ... unchanged label styles ... */
+.label-item {
+    font-weight: 700;
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.stage-1 {
+    width: 83.33%;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.stage-2 {
+    width: 16.66%;
+    text-align: center;
+}
+
+.horizontal-content {
+    display: flex;
+    min-width: 1100px;
+    gap: 0;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-right: 100px;
+    /* Extra space for the last connector/key icon */
+    position: relative;
+}
+
+/* Columns */
+.process-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 0 10px;
+}
+
+.column-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.step-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin-bottom: 0.5rem;
+    display: block;
+    max-width: 150px;
+}
+
+.step-big-number {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--color-dark);
+    line-height: 1;
+}
+
+/* Main Vertical Cards */
+.process-main-card {
+    width: 100%;
+    border: 1px solid var(--color-primary);
+    background: var(--color-white);
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform var(--transition-fast);
+}
+
+.bg-cream {
+    background-color: #fcece4 !important;
+}
+
+.vertical-text-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.card-bottom-info {
+    padding: 1.5rem 1rem;
+    border-top: 1px solid rgba(242, 90, 41, 0.2);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.mini-icon {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.column-desc {
+    font-size: 0.8rem;
+    color: var(--color-dark);
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+/* Scroll Hint for Mobile */
+.scroll-hint-mobile {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    background: rgba(var(--color-primary-rgb), 0.9);
+    /* Assuming we have an orange primary */
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    z-index: 100;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    animation: swipe-hint 3s infinite;
+    transform: translateY(-50%);
+}
+
+@keyframes swipe-hint {
+
+    0%,
+    100% {
+        transform: translate(0, -50%);
+        opacity: 0;
+    }
+
+    20% {
+        transform: translate(0, -50%);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translate(-20px, -50%);
+        opacity: 1;
+    }
+
+    90% {
+        transform: translate(-25px, -50%);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .scroll-hint-mobile {
+        display: flex;
+    }
+}
+
+/* Letter Anchors (A, B, C, D) positioned below */
+.process-letter-anchor {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    width: 140px;
+    text-align: center;
+    z-index: 10;
+}
+
+.letter-circle {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.letter-full-text {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    line-height: 1.2;
+}
+
+.process-letter-anchor:hover .letter-circle {
+    background-color: var(--color-primary);
+    transform: scale(1.1);
+}
+
+/* Connective Elements */
+.step-divider-dotted {
+    position: absolute;
+    right: -1px;
+    top: 50%;
+    height: 80%;
+    transform: translateY(-40%);
+    border-right: 2px dashed var(--color-primary);
+    opacity: 0.5;
+    z-index: 5;
+}
+
+.step-connector-final {
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.step-connector-final::before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--color-gray);
+}
+
+.key-icon-wrapper {
+    font-size: 2rem;
+    color: var(--color-dark);
+    margin-left: 10px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 1024px) {
+    .process-horizontal-container {
+        padding-bottom: 5rem;
+        /* More space for letters */
+    }
+}
+
+@media (max-width: 768px) {
+    .section-header {
+        text-align: center;
+    }
+
+    .process-subtitle {
+        font-size: 0.9rem;
+    }
+}
