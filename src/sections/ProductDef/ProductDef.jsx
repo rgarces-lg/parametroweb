@@ -1,13 +1,17 @@
 import React from 'react';
 import './ProductDef.css';
 
+import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
+
 const ProductDef = ({ data }) => {
+    const [pdRef, isVisible] = useIntersectionObserver({ threshold: 0.1 });
+
     return (
-        <section className="product-def-section">
+        <section ref={pdRef} className="product-def-section">
             <div className="container pd-grid-container">
 
                 {/* Left Side: Information */}
-                <div className="pd-info-col animate-fade-in-up">
+                <div className={`pd-info-col reveal-on-scroll slide-in-left ${isVisible ? 'is-visible' : ''}`}>
                     <h2 className="pd-main-title">{data.title}</h2>
 
                     <div className="pd-text-content">
@@ -33,7 +37,7 @@ const ProductDef = ({ data }) => {
 
                 {/* Right Side: Concentric Visualization */}
                 <div className="pd-vis-col">
-                    <div className="pd-concentric-wrapper animate-fade-in-up">
+                    <div className={`pd-concentric-wrapper reveal-on-scroll scale-up ${isVisible ? 'is-visible delay-300' : ''}`}>
 
                         {/* Outer Circle: Meta Producto */}
                         <div className="pd-circle pd-outer">

@@ -1,19 +1,23 @@
 import React from 'react';
 import './DataPath.css';
 
+import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
+
 const DataPath = ({ data }) => {
+    const [dpRef, isVisible] = useIntersectionObserver({ threshold: 0.1 });
+
     return (
-        <section className="datapath-section">
+        <section ref={dpRef} className="datapath-section">
             <div className="container">
 
-                <div className="dp-header animate-fade-in-up">
+                <div className={`dp-header reveal-on-scroll slide-up ${isVisible ? 'is-visible' : ''}`}>
                     <h2 className="dp-title">{data.title}</h2>
                     <p className="dp-subtitle" dangerouslySetInnerHTML={{ __html: data.subtitle }}></p>
                 </div>
 
                 <div className="dp-steps-container">
                     {data.steps.map((step, index) => (
-                        <div key={index} className="dp-step-row animate-fade-in-up" style={{ animationDelay: `${index * 0.15}s` }}>
+                        <div key={index} className={`dp-step-row reveal-on-scroll slide-in-left ${isVisible ? 'is-visible' : ''}`} style={{ transitionDelay: `${index * 150}ms` }}>
 
                             <div className="dp-icon-col">
                                 <div className="dp-icon-circle">

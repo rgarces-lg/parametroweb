@@ -1,17 +1,21 @@
 import React from 'react';
 import './Services.css';
 
+import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
+
 const Services = ({ data }) => {
+    const [servicesRef, isVisible] = useIntersectionObserver({ threshold: 0.15 });
+
     return (
-        <section className="services-section">
+        <section ref={servicesRef} className="services-section">
             <div className="container">
 
-                <div className="services-header animate-fade-in-up">
+                <div className={`services-header reveal-on-scroll slide-up ${isVisible ? 'is-visible' : ''}`}>
                     <h2 className="services-title"><span>Servicios a</span> {data.targetAudience}</h2>
                 </div>
 
                 <div className="services-content">
-                    <ol className="services-list animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                    <ol className={`services-list reveal-on-scroll slide-in-left ${isVisible ? 'is-visible delay-200' : ''}`}>
                         {data.list.map((service, idx) => {
                             // The second item mentions "Proforma Dinámica" in italic, we can roughly parse or just render styling
                             // We will bold important financial keywords for aesthetics
@@ -31,7 +35,7 @@ const Services = ({ data }) => {
                     </ol>
 
                     {/* Decorative visual for list */}
-                    <div className="project-types-grid animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+                    <div className={`project-types-grid reveal-on-scroll scale-up ${isVisible ? 'is-visible delay-400' : ''}`}>
                         <div className="pt-title">Tipo de proyectos:</div>
                         <div className="pt-columns">
                             {data.projectTypes.map((type, i) => (

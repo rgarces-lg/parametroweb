@@ -1,17 +1,21 @@
 import React from 'react';
 import './FinancialAnalysis.css';
 
+import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
+
 const FinancialAnalysis = ({ data }) => {
+    const [finRef, isVisible] = useIntersectionObserver({ threshold: 0.1 });
+
     return (
-        <section className="fin-analysis-section">
+        <section ref={finRef} className="fin-analysis-section">
             <div className="container">
-                <header className="fin-header animate-fade-in-up">
+                <header className={`fin-header reveal-on-scroll slide-up ${isVisible ? 'is-visible' : ''}`}>
                     <h2 className="fin-main-title">{data.title}</h2>
                 </header>
 
                 <div className="fin-items-wrapper">
                     {data.items.map((item, index) => (
-                        <div key={item.id} id={item.anchorId} className="fin-card animate-fade-in-up" style={{ animationDelay: `${index * 0.15}s` }}>
+                        <div key={item.id} id={item.anchorId} className={`fin-card reveal-on-scroll slide-up ${isVisible ? 'is-visible' : ''}`} style={{ transitionDelay: `${index * 150}ms` }}>
                             <div className="fin-card-left">
                                 <div className="fin-letter">{item.id}</div>
                             </div>

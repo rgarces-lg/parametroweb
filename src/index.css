@@ -73,7 +73,54 @@ img {
   margin: 0 auto;
 }
 
-/* Fade in up animation */
+/* Animation Utilities */
+.reveal-on-scroll {
+  opacity: 0;
+  transition: all 0.8s var(--ease-spring);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+}
+
+/* Specific animations depending on direction */
+.slide-up {
+  transform: translateY(40px);
+}
+.slide-up.is-visible {
+  transform: translateY(0);
+}
+
+.slide-in-left {
+  transform: translateX(-50px);
+}
+.slide-in-left.is-visible {
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  transform: translateX(50px);
+}
+.slide-in-right.is-visible {
+  transform: translateX(0);
+}
+
+/* Scale up for hero or images */
+.scale-up {
+  transform: scale(0.95);
+}
+.scale-up.is-visible {
+  transform: scale(1);
+}
+
+/* Stagger delays for lists */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Existing Fade in up animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -89,3 +136,29 @@ img {
   animation: fadeInUp 0.8s var(--ease-smooth) forwards;
   opacity: 0;
 }
+
+/* Image Backgrounds for Depth */
+.hero-section {
+  background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+  position: relative;
+}
+
+.vp-section {
+  background: linear-gradient(to right, var(--color-light) 60%, rgba(242, 90, 41, 0.05) 100%),
+              url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1931&auto=format&fit=crop') right/contain no-repeat;
+  background-blend-mode: overlay;
+}
+
+.datapath-section {
+  position: relative;
+}
+.datapath-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop') center/cover;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 0;
+}
+

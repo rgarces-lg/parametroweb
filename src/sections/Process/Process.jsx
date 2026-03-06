@@ -1,9 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Process.css';
 
+import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
+
 const Process = ({ data }) => {
     const scrollContainerRef = useRef(null);
     const [showHint, setShowHint] = useState(true);
+    const [processRef, isVisible] = useIntersectionObserver({ threshold: 0.1 });
 
     const handleScroll = () => {
         if (scrollContainerRef.current.scrollLeft > 20) {
@@ -11,14 +14,14 @@ const Process = ({ data }) => {
         }
     };
     return (
-        <section className="process-section">
+        <section ref={processRef} className="process-section">
             <div className="container">
-                <div className="section-header">
+                <div className={`section-header reveal-on-scroll slide-up ${isVisible ? 'is-visible' : ''}`}>
                     <h2 className="section-title">ETAPAS</h2>
                     <p className="process-subtitle">El Camino de Datos hacia proyectos rentables, únicos e innovadores en minutos</p>
                 </div>
 
-                <div className="process-horizontal-container" ref={scrollContainerRef} onScroll={handleScroll}>
+                <div className={`process-horizontal-container reveal-on-scroll slide-in-right ${isVisible ? 'is-visible delay-300' : ''}`} ref={scrollContainerRef} onScroll={handleScroll}>
                     {/* Visual hint for mobile horizontal scroll */}
                     {showHint && (
                         <div className="scroll-hint-mobile">

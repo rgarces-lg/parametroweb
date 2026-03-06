@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -17,22 +18,21 @@ const Navbar = () => {
         <nav className={`navbar ${scrolled ? 'nav-scrolled' : ''}`}>
             <div className="container nav-container">
                 <div className="nav-logo">
-                    <img src="/logo.png" alt="Parámetro Logo" className="logo-img" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
-                    <span className="logo-text" style={{ display: 'none' }}>PARÁMETRO</span>
+                    <NavLink to="/" style={{ display: 'flex', alignItems: 'center' }}>
+                        <img src="/logo.png" alt="Parámetro Logo" className="logo-img" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
+                        <span className="logo-text" style={{ display: 'none' }}>PARÁMETRO</span>
+                    </NavLink>
                 </div>
 
-                {/* Simple desktop menu for aesthetic purposes */}
+                {/* Multipage routed navigation */}
                 <div className="nav-links">
-                    <a href="#soluciones" className="nav-link">Soluciones</a>
-                    <a href="#etapas" className="nav-link">Etapas</a>
-                    <a href="#servicios" className="nav-link">Servicios</a> <a href="#producto" className="nav-link">Producto</a>
-                    <a href="#proceso" className="nav-link">Proceso</a>
-                    <a href="#metodologia" className="nav-link">Metodología</a>
-                    <a href="#analisis-financiero" className="nav-link">Análisis</a>
+                    <NavLink to="/" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')} end>Inicio</NavLink>
+                    <NavLink to="/servicios" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>Servicios</NavLink>
+                    <NavLink to="/metodologia" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>Metodología</NavLink>
                 </div>
 
                 <div className="nav-cta">
-                    <button className="btn-primary"><a href="https://www.facebook.com/profile.php?id=61580770139641">Contacto</a></button>
+                    <a href="https://www.facebook.com/profile.php?id=61580770139641" target="_blank" rel="noreferrer" className="btn-primary" style={{ display: 'inline-block', lineHeight: 'normal' }}>Contacto</a>
                 </div>
             </div>
         </nav>
