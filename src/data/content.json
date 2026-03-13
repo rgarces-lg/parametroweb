@@ -15,7 +15,7 @@
             {
                 "id": 1,
                 "title": "Validación",
-                "description": "Optimización de volumetrías por coeficientes y utilización de espacio considerando estrategia.",
+                "description": "Validación y determinación de volumetrías arquitectónicas según coeficientes y estrategia comercial y financiera.",
                 "icon": "fa-solid fa-building-circle-check"
             },
             {
@@ -33,7 +33,7 @@
             {
                 "id": 4,
                 "title": "Estrategia",
-                "description": "Definición de esquema de negocio, estructura de capital y fuentes de apalancamiento.",
+                "description": "Definición de ingeniera financiera y de negocios considerando la estructura de capital, estructura de participaciones, con distintas fuentes de apalancamiento.",
                 "icon": "fa-solid fa-chess-knight"
             }
         ],
@@ -121,7 +121,7 @@
     },
     "productDefinition": {
         "title": "DEFINICIÓN DE PRODUCTO",
-        "description": "No puede existir una Definición de Producto sin una lectura clara del mercado, PARÁMETRO resuelve adecuadamente las oportunidades que se detectan desde una visión de negocio.\n\nEl Software concibe y crea en su primera etapa una proforma volumétrica arquitectónica con todos los datos necesarios para evaluar y optimizar comercial y financieramente todo tipo de proyecto inmobiliario de desarrollo.",
+        "description": "No puede existir una lectura clara del mercado si ésta no se transforma en un producto que resuelva adecuadamente las oportunidades que se detectan.\n\nEn ese sentido, tampoco se concibe un producto como un elemento rígido sin capacidad de perfeccionarse. PARÁMETRO aporta una nueva visión en la que la clave es lograr iterar en múltiples ocasiones ante el mercado. Para lograr esta visión de trabajo iterativa, el desarrollo de producto comprende las siguientes etapas:",
         "layers": {
             "nuclear": [
                 "Distribuciones",
@@ -142,15 +142,15 @@
         "diferenciador": [
             {
                 "text": "Tendencia y Tribus",
-                "icon": "fa-solid fa-tent"
+                "icon": "fa-solid fa-mountain-sun"
             },
             {
                 "text": "Producto a Diseñar",
-                "icon": "fa-solid fa-building-user"
+                "icon": "fa-solid fa-city"
             },
             {
                 "text": "Mercado Meta",
-                "icon": "fa-solid fa-arrow-trend-up"
+                "icon": "fa-solid fa-chart-line"
             },
             {
                 "text": "Base para Arquitectos",
@@ -158,7 +158,7 @@
             }
         ],
         "adicionales": [
-            "Elementos de valoración cuantitativa"
+            "Elements de valoración cuantitativa"
         ]
     },
     "services": {
@@ -258,7 +258,7 @@
             {
                 "title": "Análisis de Competencia en la Zona",
                 "description": "Determina áreas de oportunidad para destacar proyectos.",
-                "icon": "fa-solid fa-chart-column"
+                "icon": "fa-solid fa-chart-line"
             },
             {
                 "title": "Producto Nuclear a Meta Producto",
@@ -271,5 +271,66 @@
                 "icon": "fa-solid fa-gem"
             }
         ]
+    },
+    "marketStudy": {
+        "plazasComerciales": {
+            "chapultepec": [
+                { "name": "Walmart Chapultepec (CC)", "anc": 9114, "locales": 10 },
+                { "name": "Plaza Chapultepec (SM)", "anc": 4777, "locales": 23 },
+                { "name": "Plaza Fantasia (SM)", "anc": 503, "locales": 2 },
+                { "name": "Plaza Quality (SM)", "anc": 330, "locales": 11 },
+                { "name": "Plaza Revolución 401 (SM)", "anc": 1955, "locales": 20 },
+                { "name": "Plaza Garza (SM)", "anc": 136, "locales": 4 },
+                { "name": "Plaza Herreros (SM)", "anc": 422, "locales": 9 },
+                { "name": "Plaza Huastecos (SM)", "anc": 1173, "locales": 9 },
+                { "name": "Plaza Gasolinera (SM)", "anc": 1190, "locales": 5 }
+            ],
+            "obispado": [
+                { "name": "Galerias Monterrey (FM)", "anc": 118354, "locales": 147 },
+                { "name": "Plaza Real (CC)", "anc": 50043, "locales": 77 },
+                { "name": "Plaza Gonsy (SM)", "anc": 145, "locales": 5 },
+                { "name": "Plaza Fletes (SM)", "anc": 488, "locales": 13 },
+                { "name": "Plaza New Imagen (SM)", "anc": 196, "locales": 3 },
+                { "name": "Plaza La Salle Sur (SM)", "anc": 3148, "locales": 19 },
+                { "name": "Plaza Purisima (SM)", "anc": 910, "locales": 16 },
+                { "name": "Plaza Prepa 2 (SM)", "anc": 891, "locales": 4 },
+                { "name": "Plaza La Salle Norte (SM)", "anc": 1142, "locales": 11 },
+                { "name": "Plaza Blazzer (SM)", "anc": 1591, "locales": 10 }
+            ]
+        },
+        "viviendaVertical": {
+            "title": "Unidades Vendidas vs Inventario",
+            "subtitle": "Mercado Residencial 2Q 2019",
+            "data": [
+                { "name": "Torre Mitt", "vendidas": 74, "inventario": 57 },
+                { "name": "Catehua T.2", "vendidas": 140, "inventario": 1 },
+                { "name": "El Lucero", "vendidas": 32, "inventario": 83 },
+                { "name": "Ocampo", "vendidas": 29, "inventario": 20 },
+                { "name": "Bakara", "vendidas": 97, "inventario": 2 },
+                { "name": "Torre Shiro", "vendidas": 121, "inventario": 8 },
+                { "name": "Torre Luz", "vendidas": 98, "inventario": 54 },
+                { "name": "KYO Constella", "vendidas": 104, "inventario": 85 },
+                { "name": "Barrio W", "vendidas": 61, "inventario": 89 }
+            ]
+        },
+        "demandaRenta": {
+            "title": "Estimación de Demanda en Renta",
+            "labels": ["Menos $6,000", "$6,000-$7,000", "$8,001-$9,000", "$10,001-$11,000", "$12,001-$13,000", "$14,001-$15,000", "$17,001-$18,000", "$21,001-$22,000", "$25,001-$26,000", "$30,001-$31,000", "$35,001-$36,000"],
+            "demandaZMM": [380, 404, 417, 346, 284, 236, 179, 93, 85, 84, 84],
+            "demandaMty": [179, 208, 263, 284, 307, 228, 163, 115, 60, 61, 61],
+            "ofertaDisponible": [10, 10, 10, 65, 70, 89, 125, 102, 70, 70, 65]
+        },
+        "analisisOficinas": {
+            "title": "Análisis de Oficinas Formales - Precio Renta m2",
+            "data": [
+                { "corredor": "R.Margáin", "precio": 425 },
+                { "corredor": "Valle", "precio": 410 },
+                { "corredor": "Obispado", "precio": 377 },
+                { "corredor": "Valle Ote", "precio": 344 },
+                { "corredor": "Sta María", "precio": 310 },
+                { "corredor": "Centro", "precio": 247 },
+                { "corredor": "Contry", "precio": 255 }
+            ]
+        }
     }
 }

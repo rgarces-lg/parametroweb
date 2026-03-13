@@ -1,30 +1,39 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// Pages
-import Home from './pages/Home';
-import ServiciosPage from './pages/ServiciosPage';
-import MetodologiaPage from './pages/MetodologiaPage';
-
+// Components
+import LoadingScreen from './components/LoadingScreen';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
-import ScrollAssistant from './components/ScrollAssistant/ScrollAssistant';
-import ScrollToTop from './components/ScrollToTop'; // Utility to scroll to top on route change
+import ScrollToTop from './components/ScrollToTop';
+
+// Lazy Pages
+const HomePage = lazy(() => import('./pages/HomePage'));
+const MethodologyPage = lazy(() => import('./pages/MethodologyPage'));
+const TypologiesPage = lazy(() => import('./pages/TypologiesPage'));
+const MarketStudyPage = lazy(() => import('./pages/MarketStudyPage'));
+const ServiciosPage = lazy(() => import('./pages/ServiciosPage'));
+
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="app-container">
+      <LoadingScreen />
+      <div className="app-container font-sans bg-brand-black min-h-screen">
         <Navbar />
         
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/servicios" element={<ServiciosPage />} />
-          <Route path="/metodologia" element={<MetodologiaPage />} />
-        </Routes>
+        <Suspense fallback={null}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/servicios" element={<ServiciosPage />} />
+            <Route path="/metodologia" element={<MethodologyPage />} />
+            <Route path="/tipologias" element={<TypologiesPage />} />
+            <Route path="/estudio-mercado" element={<MarketStudyPage />} />
+          </Routes>
+        </Suspense>
 
-        <ScrollAssistant />
+
         <Footer />
       </div>
     </Router>

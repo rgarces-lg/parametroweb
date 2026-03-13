@@ -228,8 +228,9 @@
 /* Desktop Overrides */
 @media (min-width: 1024px) {
     .pd-grid-container {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1.1fr 0.9fr;
         padding: 0 4rem;
+        gap: 5rem;
     }
 }
 

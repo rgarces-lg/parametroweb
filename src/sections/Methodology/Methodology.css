@@ -12,11 +12,12 @@
 
 .meth-header {
     margin-bottom: 4rem;
+    text-align: center;
 }
 
 .meth-title {
     color: var(--color-primary);
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 800;
     margin-bottom: 0.5rem;
 }
@@ -25,6 +26,7 @@
     font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: 1px;
+    opacity: 0.8;
 }
 
 /* Icons Grid */
@@ -193,6 +195,12 @@
 
 /* Desktop Adapts */
 @media (min-width: 1024px) {
+    .methodology-section .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .meth-top-grid {
         grid-template-columns: repeat(4, 1fr);
     }
