@@ -27,7 +27,7 @@
             {
                 "id": 3,
                 "title": "Utilidad",
-                "description": "Potencial del negocio y rendimientos en función de indicadores como TIR, ROI, punto de equilibrio, múltiplo y retornos de capital.",
+                "description": "Potencial del negocio y rendimientos en función de indicadores como TIR, ROI, punto de equilibrio y retornos de capital.",
                 "icon": "fa-solid fa-money-bill-transfer"
             },
             {
@@ -243,16 +243,16 @@
     },
     "dataPath": {
         "title": "PROCESO",
-        "subtitle": "El Camino de Datos hacia proyectos rentables, únicos e innovadores",
+        "subtitle": "El Camino de Datos hacia proyectos rentables, únicos e innovadores en menos de 24 horas",
         "steps": [
             {
                 "title": "Diseña el Producto Ideal",
-                "description": "El sistema determina el producto por estrategia o parámetros establecidos.",
+                "description": "El sistema determina el producto por tipo de desarrollo, Y/o zona, por estrategia o parámetros establecidos por el profesional",
                 "icon": "fa-solid fa-bullseye"
             },
             {
-                "title": "Conceptualiza tipologías por objetivos",
-                "description": "El mix de opciones se basa en segmentos y tendencias de consumo.",
+                "title": "Conceptualiza y determina las tipologías de los productos por objetivos",
+                "description": "Se determinan las características del mix de opciones volumétricas por tipo de proyecto, segmentos objetivos, tendencias de consumo, necesidades que influyen, desde la velocidad de venta y/o renta hasta la rentabilidad del proyecto.",
                 "icon": "fa-solid fa-lightbulb"
             },
             {
@@ -261,13 +261,13 @@
                 "icon": "fa-solid fa-chart-line"
             },
             {
-                "title": "Producto Nuclear a Meta Producto",
-                "description": "Diseño volumétrico que ofrece metrajes, tipologías y precios.",
+                "title": "Propuesta de Producto Nuclear a Meta Producto",
+                "description": "El diseño volumétrico en proforma ofrece metrajes, tipologías, rango de precios, valores de venta y renta; costos , e indicadores de negocio propuesto con su ingeniera financiera según el tipo de proyecto definido",
                 "icon": "fa-solid fa-city"
             },
             {
-                "title": "Valor Agregado",
-                "description": "Métodos para definir aumentos de precios y plusvalías emocionales.",
+                "title": "Propuesta de Producto Ampliado y Valor Agregado",
+                "description": "El sistema diseña métodos para definir lista y aumentos de precios, plusvalías; acordes a estrategias comerciales, o de cobranza, que a su vez detonen en estrategias de urgencia emocional o sentido de pertenencia por un lado y por el otro estrategia de flujos.\n\nAdemás propone características arquitectónicas y/o de uso que validen dicho valor agregado.",
                 "icon": "fa-solid fa-gem"
             }
         ]

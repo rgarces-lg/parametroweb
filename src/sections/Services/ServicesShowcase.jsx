@@ -59,7 +59,7 @@ const ServicesShowcase = () => {
       deliverables: [
         "Definición de estructura de capital y deuda",
         "Proyecciones de flujo de caja y análisis de sensibilidad",
-        "Indicadores financieros (TIR, ROE, ROI, Múltiplo)",
+        "Indicadores financieros (TIR, ROE y ROI)",
         "Modelado de proforma y modelo de negocio"
       ],
       color: "from-brand-emerald to-teal-600"
