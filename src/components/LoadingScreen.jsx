@@ -42,7 +42,7 @@ const LoadingScreen = () => {
             <div className="flex items-center gap-2 mb-8">
               <div className="w-3 h-3 rounded-full bg-red-500"></div>
               <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-              <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              <div className="w-3 h-3 rounded-full bg-brand-orange"></div>
               <span className="text-gray-500 text-sm ml-2">terminal — parametro_v2.0</span>
             </div>
             
@@ -54,14 +54,14 @@ const LoadingScreen = () => {
                   animate={{ opacity: 1, x: 0 }}
                   className="flex items-start gap-2"
                 >
-                  <span className="text-brand-emerald">{'>'}</span>
+                  <span className="text-brand-orange">{'>'}</span>
                   <span className={index === currentStep ? "text-white" : "text-gray-400"}>
                     {step}
                     {index === currentStep && currentStep < steps.length - 1 && (
                       <motion.span
                         animate={{ opacity: [0, 1] }}
                         transition={{ repeat: Infinity, duration: 0.6 }}
-                        className="inline-block w-2 h-5 bg-brand-emerald ml-2 align-middle"
+                        className="inline-block w-2 h-5 bg-brand-orange ml-2 align-middle"
                       />
                     )}
                   </span>
@@ -73,7 +73,7 @@ const LoadingScreen = () => {
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: `${(currentStep / steps.length) * 100}%` }}
-                className="h-full bg-brand-emerald shadow-[0_0_10px_rgba(16,185,129,0.5)]"
+                className="h-full bg-brand-orange shadow-[0_0_10px_rgba(242,90,41,0.5)]"
               />
             </div>
           </div>

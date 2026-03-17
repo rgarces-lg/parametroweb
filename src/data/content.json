@@ -6,7 +6,7 @@
     "valueProposition": {
         "title": "Servicios y soluciones",
         "question": "¿Cómo lo hacemos?",
-        "highlight": "Contamos con la metodología adecuada para diseñar y Validar el más Rentable Uso de Suelo de tu Proyecto en minutos"
+        "highlight": "Contamos con la metodología adecuada para diseñar y Validar el más Rentable Uso de Suelo de tu Proyecto"
     },
     "methodology": {
         "title": "METODOLOGÍA",
@@ -162,7 +162,7 @@
         ]
     },
     "services": {
-        "targetAudience": "Desarrolladores, Dueños de tierra, Arquitectos, Ingenieros",
+        "targetAudience": "Dueños de tierra, fondos de inversión, family office, financieras, arquitectos e ingenieros.",
         "list": [
             "Diseño inteligente bajo parámetros de negocio y/o comerciales y financieros.",
             "Definición de producto en Proforma Dinámica.",
@@ -243,7 +243,7 @@
     },
     "dataPath": {
         "title": "PROCESO",
-        "subtitle": "El Camino de Datos hacia proyectos rentables, únicos e innovadores en minutos",
+        "subtitle": "El Camino de Datos hacia proyectos rentables, únicos e innovadores",
         "steps": [
             {
                 "title": "Diseña el Producto Ideal",

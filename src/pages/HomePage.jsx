@@ -5,7 +5,7 @@ import PageTeasers from '../sections/PageTeasers/PageTeasers';
 
 const HomePage = () => {
   return (
-    <main className="bg-brand-black">
+    <main className="bg-brand-dark">
       <Hero />
       <ValueProposal />
       <PageTeasers />

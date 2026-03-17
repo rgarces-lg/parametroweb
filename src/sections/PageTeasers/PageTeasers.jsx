@@ -52,20 +52,29 @@ const PageTeasers = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group"
+              className="group h-full"
             >
-              <Link to={teaser.path} className="block h-full bg-brand-dark border border-white/5 p-8 rounded-3xl transition-all hover:border-brand-orange/30 hover:bg-brand-dark/80">
-                <div className={`w-14 h-14 ${teaser.color} rounded-2xl flex items-center justify-center mb-6 transform group-hover:rotate-6 transition-transform`}>
-                  <teaser.icon className="text-white w-7 h-7" />
+              <Link to={teaser.path} className="block h-full bg-brand-light p-8 rounded-[2rem] transition-all hover:shadow-2xl hover:shadow-brand-orange/20 relative overflow-hidden flex flex-col border border-brand-orange/10 group-hover:border-brand-orange/30">
+                {/* Accent Orange Line at top - always visible, but grows on hover */}
+                <div className="absolute top-0 left-0 w-full h-[3px] bg-brand-orange group-hover:h-2 transition-all duration-300" />
+                
+                <div className="w-12 h-12 bg-brand-orange rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-brand-orange/20">
+                  <teaser.icon className="text-white w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3 flex items-center gap-2">
+                
+                <h3 className="text-xl font-black text-brand-dark mb-3 flex items-center justify-between">
                   {teaser.title}
                   <ArrowRight className="w-5 h-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-brand-orange" />
                 </h3>
-                <p className="text-gray-400 leading-relaxed mb-6">
+                
+                <p className="text-brand-dark/70 leading-relaxed mb-6 font-medium text-sm">
                   {teaser.desc}
                 </p>
-                <span className="text-brand-orange font-bold text-sm uppercase tracking-widest">Ver más</span>
+                
+                <div className="mt-auto flex items-center gap-2">
+                  <span className="text-brand-orange font-black text-[10px] uppercase tracking-[0.2em]">Explorar concepto</span>
+                  <div className="h-[1px] flex-grow bg-brand-orange/20" />
+                </div>
               </Link>
             </motion.div>
           ))}

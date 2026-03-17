@@ -8,13 +8,13 @@ export default {
     extend: {
       colors: {
         brand: {
-          emerald: '#059669',
-          teal: '#0d9488',
-          slate: '#334155',
-          gray: '#4b5563',
-          orange: '#f25a29',
+          slate: '#222222ff',
+          gray: '#313233ff',
+          orange: '#f26229ff',
+          accent: '#f28329ff',
           black: '#0f0f0f',
           dark: '#1a1a1a',
+          light: '#fffefcff',
         }
       },
       fontFamily: {

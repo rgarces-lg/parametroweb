@@ -35,40 +35,46 @@ const MarketStudyCharts = () => {
         initial={{ opacity: 0, scale: 0.98 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        className="bg-brand-dark p-10 rounded-[3rem] border border-white/10"
+        className="bg-white p-10 rounded-[2.5rem] border border-brand-dark/5 shadow-xl relative overflow-hidden"
       >
-        <div className="mb-10 text-center">
-            <h3 className="text-2xl font-black text-white uppercase tracking-widest">{marketStudy.analisisOficinas.title}</h3>
-            <p className="text-brand-orange font-bold text-xs uppercase mt-2 tracking-[0.3em]">Métricas expresadas en Pesos Mexicanos (MXN)</p>
+        {/* Subtle Node Texture */}
+        <div className="absolute top-0 right-0 w-64 h-64 opacity-[0.05] pointer-events-none grayscale translate-x-1/2 -translate-y-1/2">
+            <img src="https://images.unsplash.com/photo-1551288049-bbbda536ad31?q=80&w=2070&auto=format&fit=crop" alt="" className="w-full h-full object-contain" />
+        </div>
+
+        <div className="mb-10 text-center relative z-10">
+            <h3 className="text-2xl font-black text-brand-dark uppercase tracking-widest">{marketStudy.analisisOficinas.title}</h3>
+            <p className="text-brand-orange font-bold text-[10px] uppercase mt-2 tracking-[0.3em]">Métricas expresadas en Pesos Mexicanos (MXN)</p>
         </div>
         
-        <div className="h-[450px] w-full">
+        <div className="h-[450px] w-full relative z-10">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={marketStudy.analisisOficinas.data} layout="vertical" margin={{ left: 30, right: 30 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#ffffff05" horizontal={false} />
-              <XAxis type="number" stroke="#475569" fontSize={12} tickLine={false} axisLine={false} />
-              <YAxis dataKey="corredor" type="category" stroke="white" fontSize={12} width={100} fontWeight="700" tickLine={false} axisLine={false} />
+              <CartesianGrid strokeDasharray="3 3" stroke="#00000008" horizontal={false} />
+              <XAxis type="number" stroke="#94a3b8" fontSize={11} tickLine={false} axisLine={false} />
+              <YAxis dataKey="corredor" type="category" stroke="#1e293b" fontSize={12} width={100} fontWeight="900" tickLine={false} axisLine={false} />
               <Tooltip 
-                cursor={{ fill: '#ffffff02' }}
-                contentStyle={{ backgroundColor: '#000', border: '1px solid #333', borderRadius: '12px' }}
+                cursor={{ fill: '#00000003' }}
+                contentStyle={{ backgroundColor: '#fff', border: '1px solid #eee', borderRadius: '12px', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }}
+                labelStyle={{ fontWeight: '900', color: '#1a1a1a' }}
                 formatter={(value) => [`$${value} MXN/m²`, 'Precio Renta']}
               />
               <Bar dataKey="precio" name="Precio Renta" radius={[0, 10, 10, 0]}>
                    {marketStudy.analisisOficinas.data.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={index === 0 ? '#f25a29' : index === 1 ? '#0d9488' : '#1e3a8a'} />
+                    <Cell key={`cell-${index}`} fill={index === 0 ? '#f25a29' : index === 1 ? '#334155' : '#1e293b'} />
                   ))}
               </Bar>
             </BarChart>
           </ResponsiveContainer>
         </div>
         
-        <div className="mt-8 pt-8 border-t border-white/5 flex justify-between items-center opacity-50">
-            <span className="text-[10px] text-gray-500 font-medium leading-relaxed max-w-md">
+        <div className="mt-8 pt-8 border-t border-brand-dark/10 flex justify-between items-center relative z-10">
+            <span className="text-[10px] text-brand-dark/50 font-bold leading-relaxed max-w-md uppercase tracking-tight">
                 * El precio de renta promedio por m2 se observa en la zona nuclear, destacando el corredor Gómez Morin - Margáin como el líder histórico.
             </span>
             <div className="flex gap-2">
-                <div className="w-2 h-2 bg-brand-orange" />
-                <div className="w-2 h-2 bg-brand-teal" />
+                <div className="w-3 h-3 bg-brand-orange shadow-lg shadow-brand-orange/20" />
+                  <div className="w-3 h-3 bg-slate-400 shadow-lg shadow-slate-400/20" />
             </div>
         </div>
       </motion.div>
@@ -77,7 +83,7 @@ const MarketStudyCharts = () => {
       <div className="grid md:grid-cols-3 gap-6">
         {[
           { label: "Proyección Poblacional 2030", value: "+159,000", sub: "Crecimiento Acumulado 14%" },
-          { label: "Mercado de Renta Monterrey", value: "33.85%", sub: "Incremento 2010 - 2015" },
+          { label: "Mercado de Renta Monterrey", value: "33.85%", sub: "Incremento en los últimos años" },
           { label: "Ocupación Promedio Juárez", value: "81%", sub: "Resiliencia Comercial" }
         ].map((stat, i) => (
           <motion.div
@@ -86,11 +92,13 @@ const MarketStudyCharts = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="bg-white/5 p-8 rounded-3xl border border-white/5 text-center"
+            className="bg-white p-10 rounded-[2rem] border border-brand-dark/5 text-center shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden relative"
           >
-            <div className="text-[10px] uppercase tracking-[0.2em] text-gray-500 mb-2 font-black">{stat.label}</div>
-            <div className="text-4xl font-black text-brand-orange mb-1 tracking-tighter">{stat.value}</div>
-            <div className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">{stat.sub}</div>
+             <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
+                  style={{ backgroundImage: 'radial-gradient(#f25a29 0.5px, transparent 0.5px)', backgroundSize: '20px 20px' }}></div>
+            <div className="text-[10px] uppercase tracking-[0.3em] text-brand-dark/40 mb-3 font-black relative z-10">{stat.label}</div>
+            <div className="text-4xl font-black text-brand-dark mb-2 tracking-tighter relative z-10">{stat.value}</div>
+            <div className="text-[10px] text-brand-orange font-black uppercase tracking-widest relative z-10">{stat.sub}</div>
           </motion.div>
         ))}
       </div>

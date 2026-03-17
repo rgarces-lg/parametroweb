@@ -102,42 +102,59 @@ const TypologiesGrid = () => {
   ];
 
   return (
-    <section className="py-24 bg-brand-slate">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-16">
-          <span className="text-brand-orange font-bold uppercase tracking-widest text-sm mb-4 block">Portafolio / Dominio</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Tipologías de <span className="text-brand-teal">Gran Formato.</span></h2>
-          <p className="text-gray-400 max-w-2xl">Nuestra experiencia abarca todo el espectro del retail y desarrollos de usos mixtos.</p>
+    <section className="py-24 bg-brand-light relative overflow-hidden">
+      {/* Texture Overlay */}
+      <div className="absolute inset-0 opacity-[0.3] pointer-events-none" 
+           style={{ backgroundImage: 'radial-gradient(#505357 0.5px, transparent 0.5px)', backgroundSize: '30px 30px' }}></div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="mb-20">
+          <span className="text-brand-orange font-black uppercase tracking-[0.4em] text-[10px] mb-4 block">Portafolio / Dominio</span>
+          <h2 className="text-5xl md:text-7xl font-black text-brand-dark mb-6 leading-none tracking-tighter uppercase leading-[0.9]">
+            Tipologías de <br />
+            <span className="text-brand-orange italic">Gran Formato.</span>
+          </h2>
+          <p className="text-brand-dark/70 text-lg lg:text-xl font-bold max-w-2xl border-l-4 border-brand-orange pl-6">
+            Nuestra experiencia abarca todo el espectro del retail y desarrollos de usos mixtos, adaptándonos a cada activo.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {typologies.map((typ, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="group relative overflow-hidden rounded-[2rem] bg-brand-black/40 border border-white/5 h-[320px]"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ 
+                duration: 0.8, 
+                delay: index * 0.05,
+                ease: "easeOut"
+              }}
+              className="relative overflow-hidden rounded-[10px] bg-white border border-brand-dark/5 h-auto shadow-lg hover:shadow-2xl transition-all duration-500"
             >
-              {/* Image with overlay */}
-              <div className="absolute inset-0 z-0">
+              {/* Image Container */}
+              <div className="h-[240px] relative overflow-hidden">
                 <img 
                   src={typ.image} 
                   alt={typ.title} 
-                  className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" 
+                  className="w-full h-full object-cover transition-transform duration-700 pointer-events-none" 
                   onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000"; }}
                 />
-                {/* Subtle bottom gradient only for readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                {/* Accent Line */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-brand-orange" />
               </div>
 
-              {/* Content */}
-              <div className="relative z-10 h-full p-6 flex flex-col justify-end">
-                <h3 className="text-xl font-bold text-white mb-1 group-hover:text-brand-orange transition-colors">{typ.title}</h3>
-                <p className="text-xs text-gray-300 line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              {/* Content - Always Visible */}
+              <div className="p-8">
+                <h3 className="text-xl font-black text-brand-dark mb-3 uppercase tracking-tighter">{typ.title}</h3>
+                <p className="text-brand-dark/60 text-sm font-bold leading-relaxed border-l-2 border-brand-orange/30 pl-4 mb-4">
                   {typ.desc}
                 </p>
+                <div className="flex items-center gap-2 text-[9px] font-black text-brand-orange uppercase tracking-widest">
+                   <div className="w-4 h-[1px] bg-brand-orange/40" />
+                   <span>{typ.reference}</span>
+                </div>
               </div>
             </motion.div>
           ))}

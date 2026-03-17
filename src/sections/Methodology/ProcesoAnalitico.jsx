@@ -1,96 +1,110 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Target, Lightbulb, BarChart3, Building2, Gem } from 'lucide-react';
+import { Target, Users, Search, Building2, Gem } from 'lucide-react';
+import phase2Img from '../../assets/images/methodology/phase2.png';
 
 const ProcesoAnalitico = () => {
     const steps = [
         {
             title: "Diseña el Producto Ideal",
-            desc: "El sistema determina el producto por estrategia o parámetros establecidos.",
-            icon: Target,
-            color: "text-brand-orange"
+            desc: "El sistema determina el producto por tipo de desarrollo, zona, por estrategia o parámetros establecidos por el profesional.",
+            icon: Target
         },
         {
-            title: "Conceptualiza tipologías por objetivos",
-            desc: "El mix de opciones se basa en segmentos y tendencias de consumo.",
-            icon: Lightbulb,
-            color: "text-brand-orange"
+            title: "Conceptualiza y determina las tipologías de los productos por objetivos",
+            desc: "Se determinan las características del mix de opciones volumétricas por tipo de proyecto, segmentos objetivos, tendencias de consumo, necesidades que influyen, desde la velocidad de venta hasta la rentabilidad del proyecto.",
+            icon: Users
         },
         {
-            title: "Análisis de Competencia en la Zona",
-            desc: "Determina áreas de oportunidad para destacar proyectos.",
-            icon: BarChart3,
-            color: "text-brand-orange"
+            title: "Análisis de Competencia y Ofertados en la Zona",
+            desc: "El sistema localiza y determina áreas de oportunidad para destacar los tipos de proyectos y sus conceptos volumétricos para el mix de opciones, y los valores de venta o renta a proyectar.",
+            icon: Search
         },
         {
-            title: "Producto Nuclear a Meta Producto",
-            desc: "Diseño volumétrico que ofrece metrajes, tipologías y precios.",
-            icon: Building2,
-            color: "text-brand-orange"
+            title: "Propuesta de Producto Nuclear a Meta Producto",
+            desc: "Proponemos las características dentro del proyecto que los prospectos buscan. El diseño volumétrico en proforma ofrece metrajes, tipologías, rango de precios a venta, renta, costos, e indicadores de negocio propuesto y financieros del tipo de proyecto definido.",
+            icon: Building2
         },
         {
-            title: "Valor Agregado",
-            desc: "Métodos para definir aumentos de precios y plusvalías emocionales.",
-            icon: Gem,
-            color: "text-brand-orange"
+            title: "Propuesta de Producto Ampliado o Valor Agregado",
+            desc: "El sistema diseña métodos para definir lista y aumentos de precios, plusvalías; acordes a estrategias comerciales, o de cobranza, que a su vez detonen en estrategias de urgencia emocional o sentido de pertenencia por un lado y por el otro estrategia de flujos.",
+            icon: Gem
         }
     ];
 
     return (
-        <section className="py-24 bg-white relative overflow-hidden">
-            {/* Background Text/Watermark similar to Image 3 */}
-            <div className="absolute inset-0 opacity-[0.03] pointer-events-none flex flex-col justify-around text-brand-black font-black select-none">
-                <div className="text-[15rem] leading-none -ml-20">DATA</div>
-                <div className="text-[15rem] leading-none text-right -mr-20">PROCESO</div>
+        <section id="proceso-analitico" className="py-32 bg-[#ffffff] relative overflow-hidden font-sans border-t border-[#f25a29]/5">
+            {/* Texture Overlay: Architectural Dotted Pattern */}
+            <div className="absolute inset-0 opacity-[0.4] pointer-events-none" 
+                 style={{ backgroundImage: 'radial-gradient(#505357 0.5px, transparent 0.5px)', backgroundSize: '30px 30px' }}></div>
+
+            {/* Background Decorative Element */}
+            <div className="absolute top-0 right-0 w-1/3 h-full overflow-hidden opacity-5 pointer-events-none">
+                <img src={phase2Img} alt="" className="w-full h-full object-cover" />
             </div>
 
-            <div className="max-w-7xl mx-auto px-6 relative z-10">
-                <div className="mb-20 text-center">
-                    <motion.h2 
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        className="text-brand-orange text-5xl md:text-6xl font-black mb-4 uppercase"
-                    >
-                        PROCESO
-                    </motion.h2>
-                    <motion.p 
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1 }}
-                        className="text-brand-orange/80 text-xl md:text-2xl font-bold max-w-3xl mx-auto text-center"
-                    >
-                        El Camino de Datos hacia proyectos rentables, únicos e innovadores en minutos
-                    </motion.p>
-                </div>
-
-                <div className="space-y-12 max-w-4xl mx-auto">
-                    {steps.map((step, index) => (
+            <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+                <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
+                    
+                    {/* LEFT COLUMN: Header */}
+                    <div className="lg:w-1/3">
                         <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1 }}
-                            className="flex items-start gap-8 group bg-gray-50/50 p-6 rounded-3xl border border-transparent hover:border-brand-orange/20 hover:bg-white hover:shadow-2xl hover:shadow-brand-orange/5 transition-all duration-500"
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="sticky top-40"
                         >
-                            <div className="flex-shrink-0 w-16 h-16 rounded-2xl border-2 border-brand-orange flex items-center justify-center bg-white group-hover:bg-brand-orange transition-all duration-500 shadow-xl shadow-brand-orange/10 group-hover:shadow-brand-orange/30">
-                                <step.icon className="w-8 h-8 text-brand-orange group-hover:text-white transition-colors duration-500" strokeWidth={1.5} />
-                            </div>
-                            <div className="flex-grow">
-                                <h3 className="text-2xl font-black text-brand-black mb-2 uppercase tracking-tight group-hover:text-brand-orange transition-colors">
-                                    {step.title}
-                                </h3>
-                                <p className="text-gray-500 text-lg font-medium leading-relaxed">
-                                    {step.desc}
+                            <h2 className="text-[#f25a29] text-6xl md:text-7xl font-black mb-10 tracking-tighter uppercase">
+                                PROCESO
+                            </h2>
+                            <div className="max-w-xs">
+                                <p className="text-[#505357]/80 text-xl font-bold leading-tight">
+                                    El Camino de Datos hacia proyectos rentables, únicos e innovadores en <span className="text-[#f25a29]">minutos</span>
                                 </p>
                             </div>
                         </motion.div>
-                    ))}
+                    </div>
+
+                    {/* RIGHT COLUMN: Steps */}
+                    <div className="lg:w-2/3 flex flex-col">
+                        {steps.map((step, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                className={`flex items-start gap-8 py-10 group border-t border-[#505357]/10 first:border-t-0 transition-all duration-500 hover:bg-white/40 px-4 rounded-xl`}
+                            >
+                                {/* Icon Container with specific image-like circle style */}
+                                <div className="flex-shrink-0 w-16 h-16 rounded-full border border-[#f25a29]/30 flex items-center justify-center bg-white shadow-sm transition-all duration-500 group-hover:bg-[#f25a29] group-hover:border-[#f25a29] group-hover:shadow-[0_10px_20px_rgba(242,90,41,0.2)]">
+                                    <step.icon className="w-7 h-7 text-[#f25a29] group-hover:text-white transition-colors duration-500" strokeWidth={1.5} />
+                                </div>
+
+                                <div className="flex flex-col">
+                                    <h3 className="text-[#505357] text-2xl font-black mb-3 group-hover:text-[#f25a29] transition-colors duration-500 tracking-tight">
+                                        {step.title}
+                                    </h3>
+                                    <p className="text-[#505357]/70 text-lg leading-relaxed font-medium transition-colors duration-500 group-hover:text-[#505357]">
+                                        {step.desc}
+                                    </p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
 
-                {/* Footer Branding inside section matching style */}
-                <div className="mt-20 flex justify-end items-center gap-3 opacity-30">
-                    <span className="text-[10px] font-black tracking-widest uppercase text-brand-black">Arquitectura Financiera</span>
-                    <div className="w-3 h-3 bg-brand-orange clip-path-triangle" style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }} />
+                {/* Vertical Decorative Divider (Tech lines) */}
+                <div className="mt-24 border-t border-[#f25a29]/10 pt-10 flex justify-between items-center opacity-40">
+                    <div className="flex gap-2">
+                        {[1, 2, 3].map(i => (
+                            <div key={i} className="w-2 h-2 rounded-full bg-[#f25a29]" />
+                        ))}
+                    </div>
+                    <div className="flex items-center gap-4">
+                        <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#505357]">Arquitectura Paramétrica</span>
+                        <div className="w-10 h-[1px] bg-[#f25a29]" />
+                    </div>
                 </div>
             </div>
         </section>
@@ -98,3 +112,4 @@ const ProcesoAnalitico = () => {
 };
 
 export default ProcesoAnalitico;
+
