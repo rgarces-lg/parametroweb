@@ -7,12 +7,12 @@ const ProcesoAnalitico = () => {
     const steps = [
         {
             title: "Diseña el Producto Ideal",
-            desc: "El sistema determina el producto por tipo de desarrollo, zona, por estrategia o parámetros establecidos por el profesional.",
+            desc: "El sistema determina el producto por tipo de desarrollo, Y/o zona, por estrategia o parámetros establecidos por el profesional",
             icon: Target
         },
         {
             title: "Conceptualiza y determina las tipologías de los productos por objetivos",
-            desc: "Se determinan las características del mix de opciones volumétricas por tipo de proyecto, segmentos objetivos, tendencias de consumo, necesidades que influyen, desde la velocidad de venta hasta la rentabilidad del proyecto.",
+            desc: "Se determinan las características del mix de opciones volumétricas por tipo de proyecto, segmentos objetivos, tendencias de consumo, necesidades que influyen, desde la velocidad de venta y/o renta hasta la rentabilidad del proyecto.",
             icon: Users
         },
         {
@@ -22,12 +22,12 @@ const ProcesoAnalitico = () => {
         },
         {
             title: "Propuesta de Producto Nuclear a Meta Producto",
-            desc: "Proponemos las características dentro del proyecto que los prospectos buscan. El diseño volumétrico en proforma ofrece metrajes, tipologías, rango de precios a venta, renta, costos, e indicadores de negocio propuesto y financieros del tipo de proyecto definido.",
+            desc: "El diseño volumétrico en proforma ofrece metrajes, tipologías, rango de precios, valores de venta y renta; costos , e indicadores de negocio propuesto con su ingeniera financiera según el tipo de proyecto definido",
             icon: Building2
         },
         {
-            title: "Propuesta de Producto Ampliado o Valor Agregado",
-            desc: "El sistema diseña métodos para definir lista y aumentos de precios, plusvalías; acordes a estrategias comerciales, o de cobranza, que a su vez detonen en estrategias de urgencia emocional o sentido de pertenencia por un lado y por el otro estrategia de flujos.",
+            title: "Propuesta de Producto Ampliado y Valor Agregado",
+            desc: "El sistema diseña métodos para definir lista y aumentos de precios, plusvalías; acordes a estrategias comerciales, o de cobranza, que a su vez detonen en estrategias de urgencia emocional o sentido de pertenencia por un lado y por el otro estrategia de flujos. Además propone características arquitectónicas y/o de uso que validen dicho valor agregado.",
             icon: Gem
         }
     ];
@@ -59,7 +59,7 @@ const ProcesoAnalitico = () => {
                             </h2>
                             <div className="max-w-xs">
                                 <p className="text-[#505357]/80 text-xl font-bold leading-tight">
-                                    El Camino de Datos hacia proyectos rentables, únicos e innovadores en <span className="text-[#f25a29]">minutos</span>
+                                    El Camino de Datos hacia proyectos rentables, únicos e innovadores en <span className="text-[#f25a29]">menos de 24 horas</span>
                                 </p>
                             </div>
                         </motion.div>

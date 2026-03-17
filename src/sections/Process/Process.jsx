@@ -18,7 +18,7 @@ const Process = ({ data }) => {
                 <div className="mb-16 text-center">
                     <h2 className="text-[#f25a29] text-5xl md:text-6xl font-black uppercase tracking-tight mb-4">ETAPAS</h2>
                     <p className="text-gray-600 text-lg md:text-xl font-medium max-w-3xl mx-auto">
-                        El Camino de Datos hacia proyectos rentables, únicos e innovadores en minutos
+                        El Camino de Datos hacia proyectos rentables, únicos e innovadores en menos de 24 horas
                     </p>
                 </div>
 
