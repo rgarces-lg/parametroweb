@@ -27,7 +27,7 @@
             {
                 "id": 3,
                 "title": "Utilidad",
-                "description": "Potencial del negocio y rendimientos en función de indicadores como TIR, ROI, múltiplo y retornos de capital.",
+                "description": "Potencial del negocio y rendimientos en función de indicadores como TIR, ROI, punto de equilibrio, múltiplo y retornos de capital.",
                 "icon": "fa-solid fa-money-bill-transfer"
             },
             {
@@ -300,7 +300,7 @@
         },
         "viviendaVertical": {
             "title": "Unidades Vendidas vs Inventario",
-            "subtitle": "Mercado Residencial 2Q 2019",
+            "subtitle": "Mercado Residencial",
             "data": [
                 { "name": "Torre Mitt", "vendidas": 74, "inventario": 57 },
                 { "name": "Catehua T.2", "vendidas": 140, "inventario": 1 },

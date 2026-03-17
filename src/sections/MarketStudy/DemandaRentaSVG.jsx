@@ -33,11 +33,19 @@ const DemandaRentaSVG = () => {
           <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
                style={{ backgroundImage: 'radial-gradient(#1e293b 0.5px, transparent 0.5px)', backgroundSize: '40px 40px' }}></div>
 
-          <div className="mb-12 relative z-10 border-l-4 border-brand-orange pl-6">
-            <h3 className="text-3xl font-black text-brand-dark uppercase tracking-tighter">Estimación de Demanda en Renta</h3>
-            <p className="text-brand-dark/50 text-sm font-bold mt-1 uppercase tracking-widest leading-tight">
-              Capacidad de mercado vs desglose de unidades disponibles <br className="hidden md:block" /> por precio de renta
-            </p>
+          <div className="mb-12 relative z-10">
+            <div className="mb-6 bg-brand-orange/5 p-4 rounded-xl border-l-4 border-brand-orange">
+              <span className="text-brand-orange font-black uppercase tracking-widest text-[10px] block mb-2">Ejemplo de indicadores</span>
+              <p className="text-brand-dark/70 text-xs font-bold leading-relaxed">
+                Analizamos la absorción mensual, precios por m², cap rates y vacancia para determinar la viabilidad real del proyecto.
+              </p>
+            </div>
+            <div className="border-l-4 border-brand-orange pl-6">
+              <h3 className="text-3xl font-black text-brand-dark uppercase tracking-tighter">Estimación de Demanda en Renta</h3>
+              <p className="text-brand-dark/50 text-sm font-bold mt-1 uppercase tracking-widest leading-tight">
+                Capacidad de mercado vs desglose de unidades disponibles <br className="hidden md:block" /> por precio de renta
+              </p>
+            </div>
           </div>
 
           <div className="relative aspect-[16/9] w-full z-10">
@@ -158,8 +166,8 @@ const DemandaRentaSVG = () => {
                </svg>
             </div>
             <h4 className="text-2xl font-black uppercase tracking-tight mb-4 leading-none">Visión <br /> <span className="text-brand-orange italic">Estratégica.</span></h4>
-            <p className="text-white/70 text-sm font-bold leading-relaxed border-l-2 border-brand-orange pl-6 lowercase">
-              Nuestro análisis no se queda en números fríos. integramos la realidad urbana de Monterrey para proyectar la absorción real y mitigar riesgos en cada m2 desarrollado.
+            <p className="text-white/70 text-sm font-bold leading-relaxed border-l-2 border-brand-orange pl-6">
+              Nuestro análisis no se queda en números fríos. Integramos la realidad urbana de la zona a analizar para proyectar áreas de oportunidad, diferenciadores comerciales, factores de éxito y, a través de la correlación de datos, cuantificar el proyecto con mayor rentabilidad.
             </p>
             <div className="mt-8 pt-8 border-t border-white/10 flex items-center justify-between">
                <span className="text-[10px] font-black tracking-widest text-brand-orange uppercase">Score de Fiabilidad: 98.4%</span>

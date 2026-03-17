@@ -114,9 +114,14 @@ const TypologiesGrid = () => {
             Tipologías de <br />
             <span className="text-brand-orange italic">Gran Formato.</span>
           </h2>
-          <p className="text-brand-dark/70 text-lg lg:text-xl font-bold max-w-2xl border-l-4 border-brand-orange pl-6">
-            Nuestra experiencia abarca todo el espectro del retail y desarrollos de usos mixtos, adaptándonos a cada activo.
-          </p>
+          <div className="space-y-4 max-w-2xl border-l-4 border-brand-orange pl-6">
+            <p className="text-brand-dark/80 text-lg lg:text-xl font-bold">
+              Antes del diseño arquitectónico valida a un nivel volumétrico financiero y comercial tu proyecto.
+            </p>
+            <p className="text-brand-dark/60 text-base font-bold">
+              Nuestra experiencia abarca todo el aspecto del retail adaptándose a cada tipo de proyecto.
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
