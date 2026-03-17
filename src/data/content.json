@@ -71,51 +71,51 @@
                 "id": 1,
                 "name": "Investigación de Mercado",
                 "verticalText": "Productos y Mercado Meta Zona",
-                "description": "Análisis de Mercado local y segmentación.",
+                "description": "Análisis de Mercado Zona Tipo de Proyecto",
                 "icon": "fa-solid fa-magnifying-glass-chart"
             },
             {
                 "id": 2,
                 "name": "Conceptualización y Determinación",
-                "verticalText": "Idea Concepto Volumetrías Estrategia",
-                "description": "Innovación y definición técnica.",
-                "icon": "fa-solid fa-lightbulb",
+                "verticalTexts": ["Idea Concepto", "Volumetrías Estrategia"],
+                "descriptions": ["Innovación y Definición de Producto", "Volumetrías por Tipo de Proyecto"],
                 "letter": "A",
-                "letterLabel": "Análisis y Modelo Financiero"
+                "letterLabel": "Análisis y Modelo Financiero",
+                "icon": "fa-solid fa-lightbulb"
             },
             {
                 "id": 3,
                 "name": "Ventas Simuladas",
                 "verticalText": "Estructura Financiera",
-                "description": "Validación preventiva en mercado.",
+                "description": "Validación de Producto Preventa Simulada",
                 "icon": "fa-solid fa-chart-line"
             },
             {
                 "id": 4,
                 "name": "Estrategia Ventas",
                 "verticalText": "Estrategia Lista de precios Cobranza",
-                "description": "Plan acelerado de comercialización.",
-                "icon": "fa-solid fa-bullseye",
+                "description": "Plan de Aceleración Comercial",
                 "letter": "B",
-                "letterLabel": "Validación Financiera"
+                "letterLabel": "Validación Financiera",
+                "icon": "fa-solid fa-bullseye"
             },
             {
                 "id": 5,
                 "name": "Estrategia Cobranza",
                 "verticalText": "Implementación",
-                "description": "Gestión de pagos y flujo.",
-                "icon": "fa-solid fa-hand-holding-dollar",
+                "description": "Plan de Cobranza Construcción",
                 "letter": "C",
-                "letterLabel": "Estrategia Desarrollo Construcción"
+                "letterLabel": "Estrategia Desarrollo Construcción",
+                "icon": "fa-solid fa-hand-holding-dollar"
             },
             {
                 "id": 6,
                 "name": "Diseño Postproforma",
-                "verticalText": "Diseño Volumétrico",
-                "description": "Optimización volumétrica con data.",
-                "icon": "fa-solid fa-pencil-ruler",
+                "isSpecial": true,
+                "description": "Diseño Volumétrico considerando Terreno y Tipo de Proyecto y Data de la Proforma",
                 "letter": "D",
-                "letterLabel": "Diseño"
+                "letterLabel": "Diseño",
+                "icon": "fa-solid fa-pencil-ruler"
             }
         ]
     },

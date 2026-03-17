@@ -210,7 +210,7 @@
 /* Letter Anchors (A, B, C, D) positioned below */
 .process-letter-anchor {
     position: absolute;
-    bottom: -60px;
+    bottom: -80px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -223,30 +223,31 @@
 }
 
 .letter-circle {
-    width: 50px;
-    height: 50px;
-    background-color: var(--color-dark);
-    color: var(--color-white);
+    width: 70px; /* Increased from 50px */
+    height: 70px; /* Increased from 50px */
+    background-color: #0f0f0f;
+    color: #ffffff;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 800;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: background-color var(--transition-fast), transform var(--transition-fast);
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .letter-full-text {
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: var(--color-dark);
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #0f0f0f;
     line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
-.process-letter-anchor:hover .letter-circle {
-    background-color: var(--color-primary);
+.process-column:hover .letter-circle {
     transform: scale(1.1);
 }
 
